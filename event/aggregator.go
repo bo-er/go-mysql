@@ -105,7 +105,7 @@ func (a *Aggregator) Finalize() Result {
 			if t, err := time.Parse("2006-01-02 15:04:05", class.Example.Ts); err != nil {
 				class.Example.Ts = ""
 			} else {
-				class.Example.Ts = t.Add(a.utcOffset).Format("2006-01-02 15:04:05")
+				class.Example.Ts = t.Format("2006-01-02 15:04:05")
 			}
 		}
 	}
